@@ -1,0 +1,34 @@
+body {
+   background-color: #c8ffd4;
+}
+.grid {
+   display: grid;
+   width: auto;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 15px;
+}
+
+.box {
+   background-color: black;
+   width: auto;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   box-shadow: inset 0em 0em 1em #fdfdbd, 0em 0em 2.5em #fdfdbd;
+   border: none;
+}
+
+.icons {
+   font-size: 50px;
+   color: #c8ffd4;
+   font-weight: bold;
+}
+
+.gameButton {
+   text-align: center;
+   margin-top: 30px;
+   background: 1000px;
+   background-color: black;
+}
