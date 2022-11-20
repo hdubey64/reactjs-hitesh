@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ThemeContext from "../Context/ThemeContext";
 import AppTheme from "../Color";
+import ThemeToggler from "./ThemeToggler";
 
 const HeroSection = () => {
    const theme = useContext(ThemeContext)[0];
@@ -26,8 +27,7 @@ const HeroSection = () => {
                border: `${currentTheme.border}`,
             }}
          >
-            {" "}
-            Click Me{" "}
+            <ThemeToggler />
          </button>
       </div>
    );
