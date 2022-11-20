@@ -15,4 +15,4 @@ const ThemeToggler = () => {
    );
 };
 
-export default ThemeContext;
+export default ThemeToggler;
