@@ -10,12 +10,7 @@ const ThemeToggler = () => {
             setThmeMode(themeMode === "light" ? "dark" : "light");
          }}
       >
-         <span>
-            {" "}
-            {themeMode === "light"
-               ? "Theme Switcher - Dark Theme"
-               : " Theme Switcher - Lights Theme"}{" "}
-         </span>
+         <span> {themeMode === "light" ? "Turn Off" : "Light On"} </span>
       </div>
    );
 };

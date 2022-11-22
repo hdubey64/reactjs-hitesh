@@ -21,13 +21,14 @@ const HeroSection = () => {
          <button
             style={{
                backgroundColor: "#26ae60",
-               padding: "10px 150px",
+               padding: "10px 20px",
                fontSize: "20px",
                color: "#fff",
                border: `${currentTheme.border}`,
             }}
          >
-            <ThemeToggler />
+            {" "}
+            Click Me
          </button>
       </div>
    );
