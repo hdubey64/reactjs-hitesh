@@ -5,9 +5,6 @@ const Header = () => {
    return (
       <header>
          <h1>Theme Toggler</h1>
-         <ThemeToggler />
-         
-        
       </header>
    );
 };

@@ -27,8 +27,7 @@ const HeroSection = () => {
                border: `${currentTheme.border}`,
             }}
          >
-            {" "}
-            Click Me
+            <ThemeToggler />
          </button>
       </div>
    );
