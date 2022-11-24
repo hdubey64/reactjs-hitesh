@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { TodoContext } from "./Context/TodoContext";
 import todoReducer from "./Context/reducer";
+import TodoForm from "./Components/TodoForms";
 
 const App = () => {
    const [todos, dispatch] = useReducer(todoReducer, []);
@@ -11,6 +12,7 @@ const App = () => {
       <TodoContext.Provider value={{ todos, dispatch }}>
          <Container fluid>
             <h1>Todo App With Context API</h1>
+            <TodoForm />
          </Container>
       </TodoContext.Provider>
    );
