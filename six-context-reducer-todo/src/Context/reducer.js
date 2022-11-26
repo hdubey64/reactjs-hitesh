@@ -1,8 +1,9 @@
 import { ADD_TODO, REMOVE_TODO } from "./action.types";
 
 export default (state, action) => {
-   switch (action.types) {
+   switch (action.type) {
       case ADD_TODO:
+         console.log("log: action.payload", action.payload);
          return [...state, action.payload];
       case REMOVE_TODO:
          return state.filter((todo) => todo.id !== action.payload);

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { FormGroup, Input, Button, Form, InputGroup } from "reactstrap";
 
 import { v4 } from "uuid";
@@ -7,7 +7,8 @@ import { ADD_TODO } from "../Context/action.types";
 
 const TodoForm = () => {
    const [todoString, setTodoString] = useState("");
-   const { dispatch } = useContext(TodoContext);
+   const { dispatch, todos } = useContext(TodoContext);
+
    const handleSubmit = (e) => {
       e.preventDefault();
       if (todoString === "") {
@@ -17,17 +18,25 @@ const TodoForm = () => {
          todoString,
          id: v4(),
       };
+
+      console.log("log: todo", todo);
+
       dispatch({
          type: ADD_TODO,
          payload: todo,
       });
-
+      console.log("log: hello");
       setTodoString("");
    };
+
+   useEffect(() => {
+      console.log("log: todos", todos);
+   }, [todos]);
+
    return (
       <Form onSubmit={handleSubmit}>
          <FormGroup>
-            <InputGroup>
+            <InputGroup className="input">
                <Input
                   type="text"
                   name="todo"
