@@ -6,6 +6,8 @@ import { TodoContext } from "./Context/TodoContext";
 import todoReducer from "./Context/reducer";
 import TodoForm from "./Components/TodoForms";
 import Todos from "./Components/Todos";
+import ProfilePic from "./Components/Header";
+import Header from "./Components/Header";
 
 const App = () => {
    const [todos, dispatch] = useReducer(todoReducer, []);
@@ -13,10 +15,10 @@ const App = () => {
       <div>
          <TodoContext.Provider value={{ todos, dispatch }}>
             <Container fluid>
-               <div className="pic">
-                  <img src="" alt="" />
-               </div>
-               <h1>Todo App With Context API</h1>
+               <h1>
+                  <Header />
+                  Todo App With Context API
+               </h1>
                <Todos />
                <TodoForm />
             </Container>
