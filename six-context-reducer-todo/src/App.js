@@ -6,7 +6,6 @@ import { TodoContext } from "./Context/TodoContext";
 import todoReducer from "./Context/reducer";
 import TodoForm from "./Components/TodoForms";
 import Todos from "./Components/Todos";
-import ProfilePic from "./Components/Header";
 import Header from "./Components/Header";
 
 const App = () => {
