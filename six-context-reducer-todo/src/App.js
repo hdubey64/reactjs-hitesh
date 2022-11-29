@@ -15,10 +15,12 @@ const App = () => {
       <div>
          <TodoContext.Provider value={{ todos, dispatch }}>
             <Container fluid>
-               <h1>
-                  <Header />
-                  Todo App With Context API
-               </h1>
+               <div className="headbg ">
+                  <h1>
+                     <Header />
+                     Todo App With Context API
+                  </h1>
+               </div>
                <Todos />
                <TodoForm />
             </Container>
