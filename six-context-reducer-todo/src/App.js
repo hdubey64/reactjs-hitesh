@@ -13,6 +13,9 @@ const App = () => {
       <div>
          <TodoContext.Provider value={{ todos, dispatch }}>
             <Container fluid>
+               <div className="pic">
+                  <img src="" alt="" />
+               </div>
                <h1>Todo App With Context API</h1>
                <Todos />
                <TodoForm />
