@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
    FormGroup,
    Input,
@@ -16,13 +16,13 @@ const TodoForm = ({ addTodos }) => {
    const handleSubmit = (e) => {
       e.preventDefault();
       if (todoString === "") {
-         return "Plese Fill Some Value";
+         return alert("Plese Fill Some Value");
       }
       const todo = {
          todoString,
          id: v4(),
       };
-      addTodos();
+      addTodos(todo);
       setTodoString("");
    };
 
@@ -38,12 +38,7 @@ const TodoForm = ({ addTodos }) => {
                   value={todoString}
                   onChange={(e) => setTodoString(e.target.value)}
                />
-               <Button
-                  color="success"
-                  //TODO: onClick
-               >
-                  Add Todo
-               </Button>
+               <Button color="success">Add Todo</Button>
             </InputGroup>
          </FormGroup>
       </Form>
