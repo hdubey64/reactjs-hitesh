@@ -1,4 +1,4 @@
-import React, { useState, useEffact } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -12,7 +12,7 @@ function App() {
       console.log("RESPONSE", response);
    };
 
-   useEffact(() => {}, []);
+   useEffect(() => {}, []);
 
    return (
       <div className="App">
