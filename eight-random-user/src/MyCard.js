@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
-import { FaEnvelope, FaMapMarketAlt, FaPhone } from "react-icons";
+import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 
 const MyCard = ({ details }) => {
    return (
@@ -14,11 +14,16 @@ const MyCard = ({ details }) => {
             />
             <CardTitle className="text-primary">
                <h1>
-                  <span className="pr-2">{details.name?.title}</span>
+                  <span className="pe-2">{details.name?.title}</span>
                   <span>{details.name?.first}</span>
                   <span>{details.name?.last}</span>
                </h1>
             </CardTitle>
+            <CardText>
+               <FaMapMarkedAlt />
+               {details.location?.city}
+               <p>{details.phone}</p>
+            </CardText>
          </CardBody>
       </Card>
    );
