@@ -7,3 +7,15 @@
 img {
    margin-top: -80px;
 }
+.info {
+   /* display: flex;
+   flex-direction: row; */
+   font-weight: 700;
+   font-size: 1.2rem;
+}
+/* .abcd {
+   width: 50%;
+} */
+p {
+   margin-top: -15px;
+}

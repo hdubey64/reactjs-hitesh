@@ -15,14 +15,28 @@ const MyCard = ({ details }) => {
             <CardTitle className="text-primary">
                <h1>
                   <span className="pe-2">{details.name?.title}</span>
-                  <span>{details.name?.first}</span>
+                  <span className="pe-2">{details.name?.first}</span>
                   <span>{details.name?.last}</span>
                </h1>
             </CardTitle>
             <CardText>
-               <FaMapMarkedAlt />
-               {details.location?.city}
-               <p>{details.phone}</p>
+               <div className="info">
+                  <p className="pe-3">
+                     <FaMapMarkedAlt className="me-1" />
+                     {details.location?.city}
+                  </p>
+                  <p className="pe-3">
+                     <FaPhone /> {details.phone}
+                  </p>
+                  <p className="pe-3">
+                     DOB :-
+                     {details.dob?.date}
+                  </p>
+                  <p className="pe-3">
+                     Age :-
+                     {details.dob?.age}
+                  </p>
+               </div>
             </CardText>
          </CardBody>
       </Card>

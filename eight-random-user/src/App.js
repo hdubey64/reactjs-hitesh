@@ -24,7 +24,7 @@ function App() {
    return (
       <Container fluid className="p-4 bg-primary App">
          <Row>
-            <Col md={4} className="offset-md-4 mt-4">
+            <Col md={4} className="offset-md-4 mt-4 abcd">
                <MyCard details={details} />
             </Col>
          </Row>
