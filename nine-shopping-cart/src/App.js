@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "bootstrap/dist/css/bootsrap.css";
 import "react-toastify/dist/reactToaify.css";
 import "./App.css";
-import { Toast } from "bootstrap";
+import { toast } from "react-toastify";
 
 function App() {
    const [cartItem, setCartItem] = useState([]);
@@ -21,6 +21,20 @@ function App() {
 
       setCartItem([...cartItem, item]);
    };
+
+   const buyNow = () => {
+      setCartItem([]);
+
+      toast("Purchase Complete", {
+         type: success,
+      });
+   };
+
+   const removeItem = (item) => {
+      setCartItem(cartItem.filter((singleItem) => singleItem.id !== item.id));
+   };
+
+   console.log("log");
 
    return (
       <div className="App">
