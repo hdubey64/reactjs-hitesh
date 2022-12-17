@@ -1,11 +1,9 @@
 import React from "react";
 
-function App() {
+export default function Visit() {
    return (
       <div>
-         <h1> App Components </h1>
+         <h1> Visit Components</h1>
       </div>
    );
 }
-
-export default App;
