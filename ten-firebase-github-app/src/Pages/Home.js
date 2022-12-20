@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-cont Home = () => {
-    return (
-        <div>
-            <h1>Home page</h1>
-        </div>
-    )
-}
+const Home = () => {
+   return (
+      <div>
+         <h1>Home page</h1>
+      </div>
+   );
+};
