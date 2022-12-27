@@ -29,6 +29,7 @@ import SignUp from "./Pages/SignUp";
 import PageNotFound from "./Pages/PageNotFound";
 import { UserContext } from "./Context/UserContext";
 import Footer from "./Layout/Footer";
+import Header from "./Layout/Header";
 
 const App = () => {
    const [user, setUser] = useState(null);
@@ -37,6 +38,7 @@ const App = () => {
       <Router>
          <ToastContainer />
          <UserContext.Provider value={{ user, setUser }}>
+            <Header />
             <Routes>
                <Route path="/" element={<Home />} />
                <Route exact path="/signin" element={<SignIn />} />
