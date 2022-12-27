@@ -1,0 +1,9 @@
+button {
+   background-color: aqua;
+   border: 1px solid cyan;
+   border-radius: 5px;
+   text-align: center;
+   justify-content: center;
+   margin: 20px;
+   color: white;
+}
