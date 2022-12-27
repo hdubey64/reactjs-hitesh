@@ -28,6 +28,7 @@ import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import PageNotFound from "./Pages/PageNotFound";
 import { UserContext } from "./Context/UserContext";
+import Footer from "./Layout/Footer";
 
 const App = () => {
    const [user, setUser] = useState(null);
@@ -42,6 +43,7 @@ const App = () => {
                <Route exact path="/signup" element={<SignUp />} />
                <Route exact path="*" element={<PageNotFound />} />
             </Routes>
+            <Footer />
          </UserContext.Provider>
       </Router>
    );
