@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
    Collapse,
    Navbar,
@@ -19,6 +19,11 @@ const Header = () => {
    const [isOpen, setIsOpen] = useState(false);
 
    const toggle = () => setIsOpen(!isOpen);
+
+   useEffect(() => {
+      console.log("log: context asd", context);
+   }, [context]);
+
    return (
       <Navbar color="info" ligh expand="md">
          {" "}
@@ -28,12 +33,12 @@ const Header = () => {
             </Link>
          </NavbarBrand>
          <NavbarText className="text-white">
-            {context.user?.email ? context.user.email : ""}
+            {context?.user?.email ? context?.user?.email : ""}
          </NavbarText>
          <NavbarToggler onClick={toggle} />
          <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto">
-               {context.user ? (
+               {context?.user ? (
                   <NavItem>
                      <NavLink tag={Link} to="/" className="text-white">
                         Logout
@@ -42,13 +47,13 @@ const Header = () => {
                ) : (
                   <>
                      <NavItem>
-                        <NavLink tag={Link} to="/" className="text-white">
-                           Sign In
+                        <NavLink tag={Link} to="/signup" className="text-white">
+                           Sign Up
                         </NavLink>
                      </NavItem>
                      <NavItem>
-                        <NavLink tag={Link} to="/" className="text-white">
-                           Sign Up
+                        <NavLink tag={Link} to="/signin" className="text-white">
+                           Sign In
                         </NavLink>
                      </NavItem>
                   </>
