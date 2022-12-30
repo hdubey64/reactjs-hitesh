@@ -45,7 +45,7 @@ const App = () => {
          <UserContext.Provider value={{ user, setUser }}>
             <Header />
             <Routes>
-               <Route path="/" element={<Home />} />
+               <Route exact path="/" element={<Home />} />
                <Route exact path="/signin" element={<SignIn />} />
                <Route exact path="/signup" element={<SignUp />} />
                <Route exact path="*" element={<PageNotFound />} />

@@ -15,12 +15,14 @@ import {
 } from "reactstrap";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { UserContext } from "../Context/UserContext";
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useContext, useState } from "react";
 
 const SignUp = () => {
    const context = useContext(UserContext);
+
+   const navigate = useNavigate();
 
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
@@ -30,13 +32,14 @@ const SignUp = () => {
       createUserWithEmailAndPassword(auth, email, password)
          .then((res) => {
             console.log(res.user);
+
+            context.setUser({ email: res.user.email, uid: res.user.uid });
             console.log("log: { email: res.user.email, uid: res.user.uid }", {
                email: res.user.email,
                uid: res.user.uid,
             });
-            context.setUser({ email: res.user.email, uid: res.user.uid });
 
-            redirect("/");
+            navigate("/");
          })
          .catch((error) => {
             console.log(error);
