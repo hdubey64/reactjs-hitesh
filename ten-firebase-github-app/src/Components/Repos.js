@@ -10,7 +10,7 @@ const Repos = ({ repos_url }) => {
       setRepos(data);
    };
 
-   useEffa(() => {
+   useEffect(() => {
       fetchRepos();
    }, [repos_url]);
 
